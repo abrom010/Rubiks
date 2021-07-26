@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour
-{
+public class CameraMovement : MonoBehaviour {
     
     [SerializeField] private Transform target;
 
@@ -11,21 +10,16 @@ public class CameraMovement : MonoBehaviour
     private float distanceToTarget;
     private Vector3 previousPosition;
 
-    private void Start()
-    {
+    private void Start() {
         cam = GetComponent<Camera>();
         distanceToTarget = Vector3.Distance(transform.position, target.position);
         transform.LookAt(target);
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
+    void Update() {
+        if (Input.GetMouseButtonDown(1)) {
             previousPosition = cam.ScreenToViewportPoint(Input.mousePosition);
-        }
-        else if (Input.GetMouseButton(0))
-        {
+        } else if (Input.GetMouseButton(1)) {
             Vector3 newPosition = cam.ScreenToViewportPoint(Input.mousePosition);
             Vector3 direction = previousPosition - newPosition;
 
