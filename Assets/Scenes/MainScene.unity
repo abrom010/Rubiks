@@ -3356,7 +3356,7 @@ GameObject:
   - component: {fileID: 726586545}
   - component: {fileID: 726586544}
   m_Layer: 0
-  m_Name: CenterMIddleRight
+  m_Name: CenterMiddleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
